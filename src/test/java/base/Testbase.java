@@ -36,6 +36,7 @@ public static void initialize()
 	if(browser.equalsIgnoreCase("Chrome"))
 	{WebDriverManager.chromedriver().setup();
 	driver = new ChromeDriver();
+	System.out.println("Chrome browser is launched successfully");
 	}
 	else if(browser.equalsIgnoreCase("edge"))
 	{
@@ -46,7 +47,7 @@ public static void initialize()
 	driver.manage().timeouts().implicitlyWait(Testutil.IMPLICIT_TIMEOUT, TimeUnit.SECONDS);
 	driver.manage().timeouts().implicitlyWait(Testutil.PAGELOAD_TIMEOUT, TimeUnit.SECONDS);
 	driver.get(prop.getProperty("url"));
-	System.out.println();
+	
 }
 
 }
